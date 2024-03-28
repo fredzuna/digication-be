@@ -1,6 +1,5 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
-
-import PortfolioEntity from './PortfolioEntity';
+import PortfolioVersionEntity from './PortfolioVersionEntity';
 
 @Entity()
 export default class PageEntity {
@@ -13,6 +12,6 @@ export default class PageEntity {
   @Column('varchar', { nullable: false, unique: true })
   url: string;
 
-  @ManyToOne(() => PortfolioEntity, { nullable: false })
-  portfolio: PortfolioEntity;
+  @ManyToOne(() => PortfolioVersionEntity, { nullable: false })
+  portfolioVersion: PortfolioVersionEntity;
 }
