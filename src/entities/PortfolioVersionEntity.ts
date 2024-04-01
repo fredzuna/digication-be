@@ -10,23 +10,13 @@ export default class PortfolioVersionEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  /* @Column()
-  public portafolioId: number
-
-  @Column()
-  public pageId: number */
-
-  /* @Field()
-  @Column({
-    type: 'enum',
-    enum: IVersionType,
-    default: IVersionType.DRAFT,
-  })
-  public version: IVersionType; */
-
   @Field()
   @Column()
   public version: string;
+
+  @Field()
+  @Column('varchar', { nullable: true })
+  public description: string;
 
   @ManyToOne(() => PortfolioEntity, { nullable: false })
   portfolio: PortfolioEntity;
