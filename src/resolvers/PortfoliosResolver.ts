@@ -21,10 +21,10 @@ export default class PortfoliosResolver {
         id: portfolio.id,
         name: portfolio.name,
         url: portfolio.url,
-        portfolioVersion: portfolio.portfolioVersion
+        portfolioVersion: portfolio.portfolioVersion,
       }));
     } catch (error) {
-      console.log(error)
+      console.log(error);
       throw new Error('Failed to fetch portfolios');
     }
   }
@@ -65,7 +65,7 @@ export default class PortfoliosResolver {
   async createSnapshotFromDraft(@Arg('portfolioId') portfolioId: number): Promise<PortfolioVersionDTO> {
     try {
       const version = await this.portfolioService.createSnapshotFromDraft(portfolioId);
-      
+
       return {
         id: version.id,
         version: version.version,
@@ -73,7 +73,7 @@ export default class PortfoliosResolver {
         pages: version.pages,
       };
     } catch (error) {
-      console.log(error)
+      console.log(error);
       throw new Error('Failed to create snapshot from draft');
     }
   }

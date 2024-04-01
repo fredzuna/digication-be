@@ -9,7 +9,7 @@ export class PortfolioVersionDTO {
   @Field()
   public version: string;
 
-  @Field({ nullable: true }) 
+  @Field({ nullable: true })
   public description?: string;
 
   @Field(() => [PortfolioPageDTO])

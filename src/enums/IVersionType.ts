@@ -1,7 +1,7 @@
 enum IVersionType {
-    DRAFT = 'draft',
-    PUBLISHED = 'published',
-    SNAPSHOT = 'snapshot',
+  DRAFT = 'draft',
+  PUBLISHED = 'published',
+  SNAPSHOT = 'snapshot',
 }
 
-export default IVersionType
+export default IVersionType;

@@ -4,7 +4,7 @@ import { Container } from 'typedi';
 import config from '../config';
 
 export function createSchema(options?: Omit<BuildSchemaOptions, 'resolvers'>): GraphQLSchema {
-  return buildSchemaSync({    
+  return buildSchemaSync({
     resolvers: config.resolvers,
     emitSchemaFile: true,
     container: Container,
