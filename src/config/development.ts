@@ -5,7 +5,7 @@ const config: ConfigInterface = {
   database: {
     type: 'sqlite' as const,
     cache: false,
-    database: ':memory:',
+    database: 'database.sqlite',
     dropSchema: true,
     entities: ['src/entities/*.ts'],
     logger: 'advanced-console' as const,
