@@ -1,14 +1,15 @@
 # Steps to run the project 
 - Execute the command to generate a migration , it generated a file migration
-	yarn run db:migrate-generate -n first-migration -d  src/migrations	
+        **yarn run db:migrate-generate -n first-migration -d  src/migrations**
 - Execute the next command 	to run the migration file and it will create the entities in the database
-	yarn run db:migrate-run
+	**yarn run db:migrate-run**
 - Execute next command to add some values in the database tables
-	yarn run seed
+	**yarn run seed**
 - Now we can run the test to check that the project works fine
-	yarn run test
+	**yarn run test**
 - Now we can run the project to use the graphql and then we can open local "http://localhost:3000/graphql"
-	yarn run dev
+	**yarn run dev**
+
 
 # Full-Stack / Backend homework (TypeScript, GraphQL)
 
